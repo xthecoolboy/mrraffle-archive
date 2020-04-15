@@ -8,7 +8,7 @@ module.exports = {
 	description: 'Usage: !addticket <user> <number of tickets> -- Give a user a ticket (GM only)',
 	execute(message, args) {
 
-	if(!message.member.roles.some(r => admins.includes(r.name) || !admins.includes(message.author.username))) {
+	if(!message.member.roles.some(r => admins.includes(r.name)) || !admins.includes(message.author.username)) {
 	    message.reply('Sorry, but only an a GM can add tickets');
 	    return
 	}

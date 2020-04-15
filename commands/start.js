@@ -14,9 +14,8 @@ module.exports = {
             message.reply('A lottery is already in process');
             return
         }
-
         // CHECK IF MEMBER HAS PERMISSIONS TO START A LOTTERY
-        if(!message.member.roles.some(r => admins.includes(r.name) || !admins.includes(message.author.username))) {
+        if(!message.member.roles.some(r => admins.includes(r.name)) || !admins.includes(message.author.username)) {
             message.reply('Sorry, but only an admin can start a raffle');
             return
         }

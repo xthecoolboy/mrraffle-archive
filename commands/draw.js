@@ -20,7 +20,7 @@ module.exports = {
         }
 
         // CHECK IF MEMBER HAS PERMISSIONS TO DRAW A WINNER
-        if(!message.member.roles.some(r => admins.includes(r.name) || !admins.includes(message.author.username))) {
+        if(!message.member.roles.some(r => admins.includes(r.name)) || !admins.includes(message.author.username)) {
             message.reply('Sorry, but only an admin can draw a winner');
             return
         }
@@ -50,7 +50,6 @@ module.exports = {
 	    let rand = randomize(tickets.length)
 	    let memberpick = ""
 	    let ticketpick = null
-	    console.log(rand)
             for (let [key, value] of Object.entries(tickets)) {
 	        if (value.id === rand){
 	            ticketpick = rand
@@ -58,7 +57,6 @@ module.exports = {
 	        }
             }
             if (!winnermembers.includes(memberpick)){
-		console.log("if passed")
 	      	winnertickets += ticketpick+", "
 		winnermembers += "<@"+memberpick+"> "
 		i++
