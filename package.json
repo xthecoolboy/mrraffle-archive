@@ -1,0 +1,28 @@
+{
+  "name": "MrRaffle",
+  "version": "1.0.0",
+  "description": "A Discord.js Bot to handle raffles with assigned tickets",
+  "author": {
+    "name": "digitalirony",
+    "email": "digitalirony@the-galaxy.net"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "keywords": [
+    "Discord",
+    "Discord.js",
+    "Discord Bot",
+    "Raffle Bot",
+    "MrRaffle"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "trivialdb": "^3.0.0"
+  },
+  "repository": "github:digitalirony/mrraffle"
+}
