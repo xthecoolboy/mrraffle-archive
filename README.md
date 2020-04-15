@@ -64,7 +64,7 @@ To start a raffle all you use the command `#start`.
 
 This command will start a raffle with default parameters. It will set a time limit of 30 days, and an undefined prize.
 
-![Default Raffle](screenshots/raffle_start.png)
+![Default Raffle](screenshots/raffle_start.jpg)
 
 You can also define custom parameters for day limit, and the prize by typing them after the `#start` command. The order is important. It should always be: **day limit** first, in number days; and lastly **prize**. 
 
