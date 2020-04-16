@@ -23,7 +23,7 @@ module.exports = {
         // ASSIGN VALUES TO SEND A MESSAGE BASED ON ARGUMENTS, OR TO DEFAULT
         // IF NO ARGUMENTS ARE GIVEN
         var days = (args[0]) ? args[0]: 30
-        var prize = (args[1]) ? args[1] : 'Undecided'
+        var prize = (args[1]) ? args.slice(1).join(" ") : 'Undecided'
 
         // CALCULATES THE DRAW DATE BASED ON THE ARGUMENTS GIVEN
         // OR DEFAULTS TO 24 HOURS FROM CURRENT DATE
@@ -40,7 +40,7 @@ module.exports = {
         const embed = new RichEmbed()
             .setColor(color)
             .setTitle('Starting a new Lottery!')
-            .setDescription("Prize:" + prize)
+            .setDescription("Prize: " + prize)
             .addField('Draw Date', 'Winner will be drawn on ' + date.toDateString(), true)
             .addField('Get A Ticket!', 'Play games, GM Games, and show up on time to earn tickets', true)
 
